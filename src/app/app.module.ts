@@ -22,6 +22,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { ReplayComponent } from './replay/replay.component';
 import { ModifProfilComponent } from './modif-profil/modif-profil.component';
 import { CoursComponent } from './cours/cours.component';
+import { SubscribeComponent } from './subscribe/subscribe.component';
 
 const appRoutes: Routes = [
   { path: 'dashBoard', component: DashBoardComponent },
@@ -33,6 +34,7 @@ const appRoutes: Routes = [
   { path: 'calendar', component: CalendarComponent },
   { path: 'replay', component: ReplayComponent },
   { path: 'modifProfil', component: ModifProfilComponent },
+  { path: 'subscribe', component: SubscribeComponent },
 
 
 ];
@@ -61,7 +63,8 @@ export const environment = {
     CalendarComponent,
     ReplayComponent,
     ModifProfilComponent,
-    CoursComponent
+    CoursComponent,
+    SubscribeComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

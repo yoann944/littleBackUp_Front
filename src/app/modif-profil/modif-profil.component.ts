@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpProvidersService } from '../services/user.service';
+import { UserService } from '../services/node/user.service';
 
 @Component({
   selector: 'app-modif-profil',
@@ -10,7 +11,7 @@ export class ModifProfilComponent implements OnInit {
 
   isUser:any;
   userInfos:any = {};
-  constructor(private http: HttpProvidersService) 
+  constructor(private http: HttpProvidersService, private userServ: UserService) 
   {
     this.isUser = localStorage.getItem('currentUser'); 
     this.getUserByEmail();
@@ -38,4 +39,20 @@ export class ModifProfilComponent implements OnInit {
     })
   }
 
+  private updateUser()
+  {
+    this.userServ.updateUser(this.userInfos).subscribe((res) => {
+      console.log('update user res : ');
+      console.log(res);
+    })
+  }
+
+  private delteUser(id: string)
+  {
+    this.userServ.deleteUser(id).subscribe((res) => {
+      console.log('delete user id : '+id);
+      console.log('response delete user :');
+      console.log(res);
+    })
+  }
 }
