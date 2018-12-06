@@ -1,0 +1,25 @@
+.headerReplay
+{
+    text-align: center;
+    height: 17%;
+    /*margin-bottom: 30%;*/
+    /*position: absolute;*/
+    width: 100%;
+    background-color: grey;
+}
+
+#content
+{
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
+
+.labelModif
+{
+    float:left;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+    padding-right: 16px;
+  }

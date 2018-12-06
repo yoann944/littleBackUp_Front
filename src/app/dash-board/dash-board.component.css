@@ -1,0 +1,56 @@
+*{font-family: 'PT Serif', serif;}
+
+.blockCours
+{
+    float: left;
+    margin: 2% 0% 0% 1.8%;  
+}
+
+#header
+{
+    background-color: #f1f1f1;
+    margin: 1.8% 1.8% 0% 1.8%;
+}
+
+#portraitProf
+{
+    margin: 0% 0% 1% 1%;
+}
+
+#nameHeader
+{
+    margin-left: 10%;
+}
+
+#deconnection
+{
+    float: right !important;
+    /* margin-right: 0%; */
+    right: 0%;
+    position: absolute;
+    width: 14%;
+    margin-top: 5%;
+}
+.imgDeco
+{
+    width: 25%;
+    float: right;
+    margin-right: 25%;
+    margin-top: -3%;
+}
+
+#btnDeco
+{
+    width: 100%;
+    border-style: none;
+    background-color: transparent;
+    margin-top: 13%;
+}
+
+#contentNoUser
+{
+    color: red;
+    width: 50%;
+    margin: 20% auto;
+
+}

@@ -1,0 +1,39 @@
+
+.headerReplay
+{
+    text-align: center;
+    height: 17%;
+    position: absolute;
+    width: 100%;
+    background-color: grey;
+}
+
+.blockReplay
+{
+    margin-top: 50%;
+    margin-bottom: -97px;
+    margin-left: 7%;
+    /* max-width: 24%; */
+}
+
+@media (min-width: 768px){
+.col-md-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 24%;
+}
+}
+
+.blockReplay:hover {
+    opacity: 0.5;
+  }
+
+.txtBlockReplay
+{
+    margin-left: 10%;
+    color:white;
+    font-size: 1.5em;
+    margin-top:18%;
+    font-weight:bold;
+}

@@ -1,0 +1,42 @@
+<div id="drawBoard">
+    <ul [ngStyle]="{'width':width+'px'}">
+        <li><a (click)=onDrawImage($event)><i class="material-icons">collections</i>
+        </a></li>
+
+        <li><a (click)=onEraseDraw($event)><i class="material-icons">clear</i>
+
+        </a></li>
+             <li><a (click)=onPencilColor($event)><i class="material-icons">create</i>
+
+
+              </a></li>
+        <li><a (click)=onClearDraw($event)> <i class="material-icons">delete</i>
+
+
+              </a></li>
+        <li class="dropdown" >
+            <a class="dropbtn"><i class="material-icons">color_lens</i>
+            </a>
+            <div class="dropdown-content" *ngFor="let item of color">
+                <a (click)="onSelectColor(item)" [style.background-color]="item"></a>
+            </div>
+        </li>
+        <li><a>
+        
+        </a></li>
+
+        <li class="dropdown">
+            <a class="dropbtn"> <i class="material-icons">format_size</i></a>
+            <div class="dropdown-content" *ngFor="let item of font">
+                <a (click)=onSelectFont(item)>{{item}}</a>
+
+            </div>
+        </li>
+
+
+
+    </ul>
+    <canvas #canvas></canvas>
+    <img [src]="imgageSrc" *ngIf="imgageSrc" />
+
+</div>

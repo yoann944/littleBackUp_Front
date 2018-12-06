@@ -1,0 +1,32 @@
+<div class="headerReplay page-header">
+  <h1 style="">Modifier votre profil <small></small></h1>
+</div>
+
+<div id="content" style="margin-top: 5%;">
+  <form (ngSubmit)="logForm()">
+      <div class="form-group">
+        <label class="labelModif">Adresse Email</label>
+        <input type="email" class="form-control" [(ngModel)]="userInfos.email" name="email" placeholder="email">
+      </div>
+      <div class="form-group">
+        <label class="labelModif">Nom</label>
+        <input type="text" class="form-control" [(ngModel)]="userInfos.nom" name="nom" placeholder="Mot de passe">
+      </div>
+      <div class="form-group">
+        <label class="labelModif">Prenom</label>
+        <input type="text" class="form-control" [(ngModel)]="userInfos.prenom" name="prenom" placeholder="Mot de passe">
+      </div>
+      <div class="form-group">
+        <label class="labelModif">photo</label>
+        <input type="text" class="form-control" [(ngModel)]="userInfos.photo" name="photo" placeholder="Mot de passe">
+      </div>
+      <!-- <div class="form-group">
+    
+          <button md-button value="1">Eleve</button>
+          <button md-button value="2">Professeur</button>
+       
+      </div> -->
+      <button type="submit" style="float:left;" class="btn btn-warning">Recevoir un nouveau mot de passe par mail</button>
+      <button type="submit" style="float:right;" class="btn btn-primary">Sauvegarder mes infos</button>
+  </form>
+</div>

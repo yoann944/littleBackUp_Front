@@ -1,0 +1,21 @@
+<div class="headerReplay page-header">
+        <h1 style="color: white">Cours 1 <small>Video de présentation du projet</small></h1>
+</div>      
+
+<video class="video" src="http://91.160.106.25:8080" autoplay controls>
+    Your browser does not support the video tag.
+</video>
+
+
+<div *ngIf="userInfos.is_prof == 1; else eleve">
+    <p>Votre live</p>
+    <video #video width="300" autoplay></video>
+</div>
+
+<ng-template #eleve>
+    <p style="    position: absolute;
+    color:white;
+    font-size: 1.5em;
+    font-weight:bold;">Votre professeur</p>
+    <video #video width="300" autoplay></video>
+</ng-template>

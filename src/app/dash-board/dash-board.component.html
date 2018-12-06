@@ -1,0 +1,70 @@
+<div *ngIf="isUser;else contentNoUser">
+<div class="page-header" id="header">
+    <div class="row">
+        <div class="col-md-6" style="max-width: 18%;" >
+            <img id="portraitProf" data-src="holder.js/260x180" alt="260x180" style="width: 260px; height: 180px; margin-top: 7%; margin-left: 4%;" src="{{userInfos.photo}}">
+        </div> 
+        <!-- gif:  http://cdn.shopify.com/s/files/1/0346/5945/files/ccostanza_grande.gif?68 -->
+        <div class="col-md-6">
+            <h1 id="portraitProf" style="margin-left: 10%;">
+                <p *ngIf="userInfos.is_prof == 1;else eleve">Professeur </p>
+                <ng-template #eleve><p>Eleve </p></ng-template>
+                <small>{{ userInfos.nom }} {{ userInfos.prenom }}</small>
+            </h1>
+            <p id="portraitProf" style="margin-left: 10%;"><small><b>Statistique de la semaine : </b> {{userInfos.time_cours}}h de cours</small></p>
+            <p id="portraitProf" style="margin-left: 10%;"><small><b>Vos commentaire et avis : </b> <a href="#">Voir ici</a> </small></p>
+            <p id="portraitProf" style="margin-left: 10%;"><small><b>Votre emploi du temps : </b> <a href="#">Voir ici</a> </small></p>
+        </div>
+        <div id="deconnection">    
+            <button id="btnDeco" (click)="logout()">
+                <img class="card-img-top imgDeco" src="../../assets/img/power_off.png">
+                <p><small><b>Deconnexion</b></small></p>
+            </button>
+        </div>
+      </div>
+  <!-- <h1 id="portraitProf" style="margin-left: 10%;">Professor <small>Cambianica Bruno</small></h1> -->
+  <!-- <img id="portraitProf" data-src="holder.js/260x180" alt="260x180" style="width: 260px; height: 180px;" src="http://cdn.shopify.com/s/files/1/0346/5945/files/ccostanza_grande.gif?68"> -->
+</div>
+
+<div class="card blockCours" style="width: 18rem;">
+    <img class="card-img-top" src="https://blog.logoscloud.com/files/2015/12/DSC_3107.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><b>Le cours</b></h5>
+      <p class="card-text">Entrer dans la salle pour voir les cours disponibles.</p>
+      <a href="/streamBoard" class="btn btn-primary">Entrer en salle</a>
+    </div>
+  </div>
+  
+  <div class="card blockCours" style="width: 18rem;">
+      <img class="card-img-top" src="../../assets/img/replay.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><b>Replays</b></h5>
+        <p class="card-text">Voir ici tous les derniers cours en replay disponible.</p>
+        <a href="/replay" class="btn btn-primary">Voir les replays</a>
+      </div>
+    </div>
+
+    <div class="card blockCours" style="width: 18rem;">
+        <img class="card-img-top" src="https://cdn-images-1.medium.com/max/1600/1*VrpS7OXiP5W5eqT8PuFdZw.jpeg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><b>Chat</b></h5>
+          <p class="card-text">Venez discuter avec vos camarades de classe ou votre professeur.</p>
+          <a href="/chat" class="btn btn-primary">Entrer dans le chat</a>
+        </div>
+    </div>
+    <div class="card blockCours" style="width: 18rem;">
+        <img class="card-img-top" src="../../assets/img/profil.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><b>Modifier mon profil</b></h5>
+          <p class="card-text">Modifier les informations de votre compte ou personaliser votre profil</p>
+          <a href="/modifProfil" class="btn btn-primary">Modifier mon profil</a>
+        </div>
+    </div>
+</div>
+<ng-template #contentNoUser>
+<div id="contentNoUser">
+    <p><b>Votre session est expirée ou innexistante</b></p>
+    <small style="width: 100%; margin-right: 6%;">S'il vous plait veillez vous reconnecter</small>
+    <a href="/" class="btn btn-primary">Reconnexion</a>
+</div>
+</ng-template>

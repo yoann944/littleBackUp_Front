@@ -1,0 +1,25 @@
+
+.video
+{
+    margin: auto;
+    width: 76%;
+    float: right;
+}
+
+.headerReplay
+{
+    text-align: center;
+    height: 17%;
+    /*margin-bottom: 30%;*/
+    /*position: absolute;*/
+    width: 100%;
+    background-color: grey;
+}
+
+#labelStream
+{
+    position: absolute;
+    color:white;
+    font-size: 1.5em;
+    font-weight:bold;
+}
