@@ -9,6 +9,7 @@ import { UserService } from '../services/node/user.service';
 export class SubscribeComponent implements OnInit {
 
   public subForm: any = {};
+  public passwordCheck: string; 
   
   constructor(private userServ: UserService) { }
 
@@ -18,12 +19,16 @@ export class SubscribeComponent implements OnInit {
   public postSubForm()
   {
     console.log(this.subForm);
-    if(this.subForm)
+
+    if(this.passwordCheck === this.subForm.password)
     {
-      this.userServ.createUser(this.subForm).subscribe((res) => {
-        console.log('create user res : ');
-        console.log(res);
-      })
+      if(this.subForm)
+      {
+        this.userServ.createUser(this.subForm).subscribe((res) => {
+          console.log('create user res : ');
+          console.log(res);
+        })
+      }
     }
   }
 }
