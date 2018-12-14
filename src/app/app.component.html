@@ -1,11 +1,22 @@
 
 <!-- Image and text -->
-<!-- <nav *ngIf="activeHeader" class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-      <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-      Bootstrap
-    </a>
-</nav> -->
+<nav class="navbar navbar-light bg-light">
+  <div class="headerContent">
+      <div class="headerLeft"> 
+        <span class="name">{{firstName}}</span>
+        <span>110</span>
+        <i class="fas fa-coins"></i>
+      </div>
+      <div class="headerRight">
+        <span>{{date}}</span>
+        <span class="home">
+            <a routerLink="/dashBoard">
+              <i class="fas fa-home"></i>
+            </a>
+        </span>
+      </div>
+    </div>
+</nav>
 
 <router-outlet></router-outlet>
 

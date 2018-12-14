@@ -10,7 +10,7 @@ export class UserService {
 
   constructor(private http: HttpClient) 
   {
-    this.urlUser = "http://localhost:3000/api/user/";
+    this.urlUser = "http://localhost:3000/user/";
   }
 
   public getUserById(id): Observable<any>

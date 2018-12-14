@@ -10,6 +10,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { HttpProvidersService } from './services/user.service';
 import { UserService } from './services/node/user.service';
+import { CoursService } from './services/node/cours/cours.service';
 
 import { AppComponent } from './app.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
   { path: 'replay', component: ReplayComponent },
   { path: 'modifProfil', component: ModifProfilComponent },
   { path: 'subscribe', component: SubscribeComponent },
+  { path: 'cours', component: CoursComponent },
 
 
 ];
@@ -78,7 +80,7 @@ export const environment = {
     BrowserModule,
     HttpClientModule
   ],
-  providers: [HttpProvidersService, UserService],
+  providers: [HttpProvidersService, UserService, CoursService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
