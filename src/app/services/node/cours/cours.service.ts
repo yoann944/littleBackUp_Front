@@ -8,7 +8,7 @@ export class CoursService {
   private url: string = 'http://localhost:3000/cours/';
   constructor(private http: HttpClient) { }
 
-  getAllCours(): Observable<any>
+  public getAllCours(): Observable<any>
   {
     return this.http.get(this.url)
   }
